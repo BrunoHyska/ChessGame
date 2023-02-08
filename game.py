@@ -80,7 +80,7 @@ def is_valid_input_format(position):
         return False
     if ord(position[0].lower()) not in range(97, 105):  # ASCII value of 'a' to 'h'
         return False
-    if int(position[1]) not in range(1, 9):
+    if not position[1].isdigit() or int(position[1]) not in range(1, 9):
         return False
     return True
 
